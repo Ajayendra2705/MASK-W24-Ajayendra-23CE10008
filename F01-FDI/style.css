@@ -1,0 +1,621 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #111; /* Darker background for better separation */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for separation */
+}
+
+.navbar-brand {
+  color: white; /* Red color for the brand name */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  background-color: red;
+  width: 10vh;
+  text-align: center;
+  margin-left: 2vw;
+  margin-top: 10px;
+}
+
+.navbar-brand:hover {
+  color: white; /* Light red on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+  background-color: white;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* White text color */
+  margin-left: 1rem; /* Space between links */
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 1rem; /* Padding for hover effect */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f00; /* Red color on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background color on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hero section styles */
+.hero {
+  height: 30vh; /* Reduced height for the hero section */
+  background: linear-gradient(to bottom, #000, #333); /* Gradient background for differentiation */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-bottom: 2px solid #f00; /* Red border */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay for better readability */
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #f00; /* Red text color */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.hero h1:hover {
+  color: #ff4d4d; /* Light red on hover */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #fff; /* White text color */
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.hero p:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background color on hover */
+  padding: 0.75rem; /* Extra padding on hover */
+}
+
+/* Call to Action Button */
+.cta-button {
+  background-color: #f00; /* Red background */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c00; /* Darker red on hover */
+}
+
+/* Carousel section styles */
+.carousel-section {
+  position: relative;
+  padding: 2rem 0;
+  background: #111; /* Dark background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper container */
+.swiper-container {
+  width: 90%; /* Increased width for better responsiveness */
+  max-width: 800px; /* Max width for better responsiveness */
+  margin: 0 auto;
+  height: 60vh; /* Height adjusted for the carousel */
+  border: 2px solid #f00; /* Red border for visual separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow around carousel */
+  position: relative;
+  overflow: hidden; /* Ensure no overflow from slides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Swiper slide styling */
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  padding: 20px; /* Padding to create space around the image */
+  box-sizing: border-box; /* Ensure padding does not affect the overall width */
+}
+
+/* Swiper slide image styling */
+.swiper-slide img {
+  max-width: 80%; /* Decreased width of image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+/* Centered Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f00; /* Red arrows */
+  background: rgba(0, 0, 0, 0.5);
+  width: 50px; /* Increased size */
+  height: 50px; /* Increased size */
+  display: flex;
+  align-items: center;
+  
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next {
+  right: 10px; /* Positioned beside the image */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Positioned beside the image */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: red;
+}
+
+/* Pagination Styles */
+.swiper-pagination {
+  bottom: 15px; /* Positioned at the bottom of the carousel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f00; /* Red pagination bullets */
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin: 0 6px; /* Space between bullets */
+  width: 12px; /* Size of the bullet */
+  height: 12px; /* Size of the bullet */
+  border-radius: 50%; /* Round shape */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff4d4d; /* Light red for the active bullet */
+  opacity: 1;
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #111; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 2px solid #f00; /* Red border at the top */
+}
+
+/* Special Animation for Last Slide */
+.swiper-slide.last-slide {
+  animation: bounceIn 1s forwards; /* Custom animation */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .swiper-container {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .swiper-slide img {
+    max-width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem; /* Further adjustment for very small screens */
+  }
+
+  .hero p {
+    font-size: 0.875rem; /* Further adjustment for very small screens */
+  }
+
+  .swiper-container {
+    height: 40vh; /* Further reduced height for very small screens */
+  }
+
+  .swiper-slide img {
+    max-width: 100%; /* Ensure full width on very small screens */
+  }
+
+  .navbar {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0.5rem; /* Reduce space between links */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px; /* Smaller size for buttons on small screens */
+    height: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px; /* Smaller bullet size */
+    height: 10px;
+  }
+}
+
+/* Additional styling */
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.certificate-box {
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-box:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.certificate-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.certificate-box p {
+  font-size: 1rem;
+  color: #fff; /* White text color */
+}
+
+/* Project Boxes */
+.project-box {
+  width: 90%;
+  max-width: 500px;
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-box:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay .skills,
+.overlay .project-name,
+.overlay .links {
+  margin: 0.5rem 0;
+}
+
+.overlay .links {
+  display: flex;
+  gap: 1rem;
+}
+
+.overlay .links a {
+  color: #f00; /* Red links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.overlay .links a:hover {
+  color: #ff4d4d; /* Light red on hover */
+}
+
+/* Footer Links */
+footer a {
+  color: #f00; /* Red color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff4d4d; /* Light red on hover */
+}
+
+/* Mobile adjustments for contact section */
+.contact-section {
+  padding: 1rem;
+}
+
+.contact-section .left {
+  margin-bottom: 1rem;
+}
+
+.contact-section .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .right .social-media,
+.contact-section .right .contact-form {
+  margin-bottom: 1rem;
+}
+
+.contact-section .contact-form input,
+.contact-section .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #f00; /* Red border */
+  border-radius: 5px;
+}
+
+.contact-section .contact-form button {
+  background-color: #f00; /* Red background for button */
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .contact-form button:hover {
+  background-color: #c00; /* Darker red on hover */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+/* Carousel section styles */
+.carousel-section {
+  position: relative;
+  padding: 2rem 0;
+  background: #111; /* Dark background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container {
+  width: 90%; /* Increased width for better responsiveness */
+  max-width: 800px; /* Max width for better responsiveness */
+  margin: 0 auto;
+  height: 60vh; /* Height adjusted for the carousel */
+  border: 2px solid #f00; /* Red border for visual separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow around carousel */
+  position: relative;
+  overflow: hidden; /* Ensure no overflow from slides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex: 0 0 100%;
+  max-width: 100%; /* Full width of swiper container */
+  position: relative;
+
+}
+
+.swiper-slide img {
+  max-width: 80%; /* Default width for smaller screens */
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* Center horizontally */
+  display: block; /* Block display to respect margins */
+  max-height: 50vh; /* Responsive height, adjusts based on viewport height */
+}
+
+@media (min-width: 768px) {
+  .swiper-slide img {
+    max-width: 70%; /* Slightly bigger for medium screens */
+    max-height: 60vh; /* Adjust height for medium screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide img {
+    max-width: 90%; /* Increase size for larger screens */
+    max-height: 80vh; /* Increase height for larger screens */
+  }
+}
+
+
+
+/* Swiper slide hover effects */
+.swiper-slide img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .swiper-container {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .swiper-slide img {
+    max-width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-container {
+    height: 40vh; /* Further reduced height for very small screens */
+  }
+
+  .swiper-slide img {
+    max-width: 100%; /* Ensure full width on very small screens */
+  }
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(220, 241, 250);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.rotating-squares {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  transform: rotate(45deg);
+  animation: rotate 1.5s linear infinite;
+}
+
+.square {
+  background-color: #3498db;
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  border-radius: 5px;
+  animation: scale 1.5s infinite ease-in-out;
+}
+
+.square:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.square:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.square:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes scale {
+  0%, 100% {
+      transform: scale(1);
+      background-color: #3498db;
+  }
+  50% {
+      transform: scale(1.5);
+      background-color: #1abc9c;
+  }
+}
