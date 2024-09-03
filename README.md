@@ -8,4 +8,8 @@ Tech Experiences :
 2. Currently learning DSA in C++;
 3. Build a PortFolio Website with 5 pages and many effects using CSS and JavaScript.
   https://ajayendra2705.github.io/PortFolio-Website/HomePage/
+
+Mask_Task :
+Front-End : 
+1. Task-1 : https://ajayendra2705.github.io/MASK-W24-Ajayendra-23CE10008/F01-FDI/
   
