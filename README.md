@@ -13,4 +13,5 @@ Tech Experiences :
 Mask_Task :
 Front-End : 
 1. Task-1 : https://ajayendra2705.github.io/MASK-W24-Ajayendra-23CE10008/F01-FDI/
+2. Task-2 : https://ajayendra2705.github.io/MASK-W24-Ajayendra-23CE10008/F02-SJP/
   
