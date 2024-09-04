@@ -142,3 +142,9 @@ button:hover {
     flex-direction: column;
     gap: 10px;
 }
+
+#signinForm {
+    align-items: center;
+    margin-left: 0;
+    margin-right: 12px;
+}
